@@ -1,0 +1,846 @@
+
+:root {
+    /* WARNA UTAMA */
+    --background: #f0f9ff;
+    --foreground: #17324d;
+
+    --card: #ffffff;
+    --card-foreground: #17324d;
+
+    --primary: #38a9e8;
+    --primary-hover: #168bd0;
+    --primary-foreground: #ffffff;
+
+    --secondary: #e0f2fe;
+    --secondary-foreground: #164e73;
+
+    --muted: #f1f8fd;
+    --muted-foreground: #6b879e;
+
+    --accent: #d9f0ff;
+    --accent-foreground: #075985;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+
+    --border: #d5eaf7;
+    --input: #c8e2f2;
+    --ring: #38a9e8;
+
+    --success: #16a36a;
+    --warning: #e99a21;
+
+    --radius: 14px;
+}
+
+/* ======================================
+   RESET DAN DASAR
+====================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+
+    background: #7fbefd;
+    color: var(--foreground);
+    margin: 0;
+    min-height: 100vh;
+}
+
+.unipi {
+    position:absolute;
+    right: 35px;
+    bottom: 557px;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+/* ======================================
+   NAVBAR
+====================================== */
+
+.navbar {
+    background: #3c96d2;
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+    box-shadow: 0 3px 15px rgba(56, 169, 232, 0.07);
+}
+
+.navbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: #e0f2fe;
+    color: #168bd0;
+    border-radius: 11px;
+    font-size: 20px;
+}
+.nav-brand:hover {
+    transition: 0.1s;
+    color: #e1ebf7;
+}
+
+
+.nav-link {
+    display: inline-block;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 0.65rem 1rem;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    margin-left: 0.4rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--accent);
+    color: #087bb8;
+}
+
+/* ======================================
+   CONTAINER UTAMA
+====================================== */
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 680px;
+    background: #aecbf9;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 12px 35px rgba(33, 126, 180, 0.09);
+}
+
+/* ======================================
+   HEADER
+====================================== */
+
+.content-header {
+    text-align: center;
+    margin-bottom: 2.2rem;
+}
+
+.content-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #164e73;
+    margin: 0 0 0.7rem;
+    line-height: 1.3;
+}
+
+.content-header p {
+    color: var(--muted-foreground);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ======================================
+   FORM
+====================================== */
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 650;
+    font-size: 0.92rem;
+    color: #315a78;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--input);
+    border-radius: 11px;
+    font-size: 0.96rem;
+    background: #fbfdff;
+    color: var(--foreground);
+    transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(56, 169, 232, 0.15);
+    background: #ffffff;
+}
+
+textarea {
+    resize: vertical;
+    line-height: 1.6;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background: linear-gradient(135deg, #38a9e8, #168bd0);
+    color: white;
+    border: none;
+    border-radius: 11px;
+    font-size: 0.98rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 5px 12px rgba(22, 139, 208, 0.18);
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, #168bd0, #087bb8);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 17px rgba(22, 139, 208, 0.25);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* ======================================
+   PESAN SUKSES DAN ERROR
+====================================== */
+
+#responseMessage {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.response-message {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.success {
+    color: #168653;
+    background: #e8fff3;
+    border: 1px solid #b8f0d0;
+}
+
+.error {
+    color: #c93636;
+    background: #fff0f0;
+    border: 1px solid #ffcaca;
+}
+
+.kode-unik-box {
+    background: #eaf7ff;
+    border: 1px dashed #68bce9;
+    color: #087bb8;
+    padding: 0.85rem;
+    margin: 1rem auto;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    max-width: 270px;
+    border-radius: 10px;
+}
+
+.info-text {
+    font-size: 0.9rem;
+    color: var(--muted-foreground);
+}
+
+/* ======================================
+   FILTER
+====================================== */
+
+.filter-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-form input,
+.filter-form select {
+    flex-grow: 1;
+}
+
+.filter-form button {
+    width: auto;
+}
+
+/* ======================================
+   DAFTAR SARAN
+====================================== */
+
+.saran-item {
+    background: #9fddff;
+    border: 1px solid var(--border);
+    padding: 1.4rem;
+    margin-bottom: 1.2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 13px rgba(33, 126, 180, 0.05);
+    transition: all 0.2s ease;
+}
+
+.saran-item:hover {
+    border-color: #a9d9f5;
+    box-shadow: 0 7px 18px rgba(33, 126, 180, 0.09);
+}
+
+.saran-item p {
+    margin: 0 0 0.85rem;
+    color: var(--foreground);
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.saran-item .meta {
+    font-size: 0.82rem;
+    color: var(--muted-foreground);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+/* ======================================
+   STATUS BADGE
+====================================== */
+
+.status-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 800;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.status-Menunggu-Balasan,
+.status-Baru,
+.status-Belum-Dibalas {
+    background: #fff4dc;
+    color: #a96b08;
+    border: 1px solid #ffe0a1;
+}
+
+.status-Sudah-Dibalas {
+    background: #dcfce9;
+    color: #168653;
+    border: 1px solid #a9ecc5;
+}
+
+/* ======================================
+   RIWAYAT PERCAKAPAN
+====================================== */
+
+.reply-box {
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+}
+
+.reply-box > strong {
+    display: block;
+    color: #17658f;
+    margin-bottom: 0.7rem;
+}
+
+.reply-box textarea {
+    min-height: 90px;
+    margin-bottom: 0.7rem;
+}
+
+.reply-box button {
+    width: auto;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* ======================================
+   BALASAN
+====================================== */
+
+.balasan-wrapper .saran-item {
+    margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.balasan-content {
+    background: #eaf7ff;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-top: none;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.balasan-content p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.no-reply {
+    color: var(--muted-foreground);
+    font-style: italic;
+}
+
+/* ======================================
+   PAGINATION
+====================================== */
+
+.pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.pagination a {
+    color: #168bd0;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #ffffff;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.pagination a:hover {
+    background: var(--accent);
+    border-color: #8acdf1;
+}
+
+.pagination a.active {
+    background: #168bd0;
+    color: white;
+    border-color: #168bd0;
+    box-shadow: 0 4px 10px rgba(22, 139, 208, 0.2);
+}
+
+/* ======================================
+   HEADING
+====================================== */
+
+h2 {
+    font-size: 1.55rem;
+    font-weight: 750;
+    margin-bottom: 1.5rem;
+    color: #164e73;
+}
+
+/* ======================================
+   FORM ADMIN
+====================================== */
+
+.admin-form {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(33, 126, 180, 0.05);
+}
+
+/* ======================================
+   TABEL ADMIN
+====================================== */
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.admin-table th,
+.admin-table td {
+    border: 1px solid var(--border);
+    padding: 0.85rem;
+    text-align: left;
+}
+
+.admin-table th {
+    background: #dff2ff;
+    color: #16577d;
+    font-weight: 750;
+}
+
+.admin-table tr:nth-child(even) {
+    background: #f5fbff;
+}
+
+.admin-table tr:hover {
+    background: #eaf7ff;
+}
+
+.admin-table td button {
+    width: auto;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.82rem;
+    margin-right: 0.5rem;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.admin-table .btn-edit {
+    color: #168bd0;
+    border-color: #38a9e8;
+}
+
+.admin-table .btn-edit:hover {
+    background: #168bd0;
+    color: white;
+}
+
+.admin-table .btn-delete {
+    color: white;
+    background: var(--destructive);
+    border-color: var(--destructive);
+}
+
+.admin-table .btn-delete:hover {
+    background: #dc2626;
+    border-color: #dc2626;
+}
+
+/* ======================================
+   MODAL
+====================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(17, 59, 85, 0.45);
+    backdrop-filter: blur(3px);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background: #ffffff;
+    margin: 5% auto;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    width: 80%;
+    max-width: 500px;
+    border-radius: 17px;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(18, 74, 110, 0.2);
+}
+
+.close-button {
+    color: var(--muted-foreground);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--primary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ======================================
+   RESPONSIVE TABLET DAN HP
+====================================== */
+
+@media (max-width: 768px) {
+
+    .navbar-inner {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .navbar-inner div {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-container {
+        padding: 1.2rem 0.8rem;
+    }
+
+    .content-wrapper {
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+
+    .content-header h1 {
+        font-size: 1.55rem;
+    }
+
+    .filter-form {
+        flex-direction: column;
+    }
+
+    .filter-form input,
+    .filter-form select,
+    .filter-form button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .saran-item {
+        padding: 1.1rem;
+    }
+
+    .saran-item .meta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .admin-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .admin-table td button {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.75rem;
+        margin-right: 0.2rem;
+    }
+
+    .pagination {
+        gap: 0.3rem;
+    }
+
+    .pagination a {
+        padding: 0.45rem 0.7rem;
+        font-size: 0.85rem;
+    }
+
+    .modal-content {
+        width: 92%;
+        margin: 10% auto;
+        padding: 1.5rem;
+    }
+
+    .kode-unik-box {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+}
+
+/* ======================================
+   RESPONSIVE HP KECIL
+====================================== */
+
+@media (max-width: 480px) {
+
+    .content-wrapper {
+        padding: 1.2rem;
+    }
+
+    .content-header h1 {
+        font-size: 1.35rem;
+    }
+
+    .nav-brand {
+        font-size: 1.2rem;
+    }
+
+    .saran-item {
+        padding: 1rem;
+    }
+
+    .reply-box button {
+        width: 100%;
+    }
+}
+
+.site-footer {
+    background: linear-gradient(135deg, #168bd0, #38a9e8);
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 3rem;
+    box-shadow: 0 -4px 15px rgba(22, 139, 208, 0.12);
+}
+
+.site-footer p {
+    margin: 0 0 7px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.footer-name {
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+.footer-caption {
+    display: block;
+    font-size: 0.8rem;
+    color: #e0f2fe;
+    letter-spacing: 0.5px;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main,
+.main-container {
+    flex: 1;
+}
+
+.site-footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+
+/* ======================================
+   RUANG PENULIS
+====================================== */
+.authors-section {
+    margin-top: 42px;
+    padding-top: 30px;
+    border-top: 1px solid #e8edf3;
+}
+.authors-heading { text-align: center; margin-bottom: 22px; }
+.authors-heading h2 { margin: 0 0 8px; color: #1f2937; }
+.authors-heading p { color: #64748b; margin: 0; }
+.authors-grid, .published-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+.author-card {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #e5eaf1;
+    border-radius: 14px;
+    background: #fff;
+    color: inherit;
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.author-card:hover, .article-card:hover {
+    transform: translateY(-3px);
+    border-color: #93c5fd;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, .08);
+}
+.author-avatar {
+    width: 58px; height: 58px; flex: 0 0 58px;
+    display: grid; place-items: center;
+    border-radius: 50%; background: #eaf2ff; color: #2563eb;
+    font-size: 24px;
+}
+.author-card-content { min-width: 0; }
+.author-card h3 { margin: 2px 0 7px; font-size: 17px; overflow-wrap: anywhere; }
+.author-category, .article-category {
+    display: inline-block; padding: 5px 10px; border-radius: 20px;
+    background: #eff6ff; color: #1d4ed8; font-size: 12px; font-weight: 600;
+}
+.author-card p { margin: 9px 0; color: #64748b; font-size: 13px; }
+.author-link { color: #2563eb; font-size: 13px; font-weight: 600; }
+.empty-authors { text-align: center; color: #64748b; padding: 24px; background: #f8fafc; border-radius: 10px; }
+.author-profile-wrapper { max-width: 1000px; }
+.back-link { display: inline-block; color: #2563eb; text-decoration: none; margin-bottom: 22px; font-weight: 600; }
+.author-profile { text-align: center; padding: 28px 15px 35px; margin-bottom: 25px; background: #f8fbff; border-radius: 16px; }
+.author-avatar-large { width: 92px; height: 92px; font-size: 38px; margin: 0 auto 14px; }
+.author-profile h1 { margin: 5px 0 10px; }
+.author-profile p { color: #64748b; margin: 12px 0 0; }
+.published-section { margin-top: 28px; }
+.article-card {
+    display: block; padding: 22px; border: 1px solid #e5eaf1; border-radius: 14px;
+    color: inherit; text-decoration: none; background: white;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.article-card h3 { margin: 12px 0 9px; color: #1e293b; }
+.article-card p { color: #64748b; line-height: 1.65; }
+.article-meta { display: flex; justify-content: space-between; gap: 10px; color: #64748b; font-size: 12px; margin-top: 18px; }
+.article-meta span { color: #2563eb; font-weight: 600; }
+.article-detail { max-width: 850px; }
+.article-detail h1 { font-size: clamp(26px, 4vw, 38px); line-height: 1.25; margin: 18px 0 12px; }
+.article-byline { color: #64748b; border-bottom: 1px solid #e5eaf1; padding-bottom: 22px; margin-bottom: 28px; }
+.article-byline a { color: #2563eb; text-decoration: none; font-weight: 600; }
+.article-body { font-size: 16px; line-height: 1.9; color: #334155; overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+    .author-card { padding: 15px; }
+    .article-meta { flex-direction: column; }
+}
